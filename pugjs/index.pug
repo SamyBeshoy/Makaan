@@ -1,0 +1,292 @@
+include mixin.pug
+doctypehtml
+html(lang="en")
+    block head
+        head
+            +head("Makaan")
+    body
+        block header
+            header
+                .container#container
+                    .boxOne
+                        img(src="imgs/icon-deal.png", alt="Deal Img") 
+                        span: a(href="index.html") Makaan
+                    .boxTwo
+                        span: a(href="index.html") Home
+                        span: a(href="##") About
+                        span: a(href="##") Property
+                        span: a(href="##") Contact
+                    .sidenav#sidenav 
+                        div.parent 
+                            div.ch1
+                                img(src="imgs/icon-deal.png", alt="Deal Img") 
+                                span: a(href="index.html") Makaan
+                            div.ch2    
+                                a(href="##" class="closebtn" onclick="closeNav()") &times;
+                        div
+                            a(href="##") Home
+                            a(href="##") About
+                            a(href="##") Property
+                            a(href="##") Contact
+                    .boxThree
+                        <span onclick="openNav()"class="tog"><i class="fa-solid fa-bars"></i></span> 
+        block landing
+            .landing
+                .container
+                    .boxOne
+                        div Find A 
+                            span Perfect Home 
+                            | To Live 
+                            br 
+                            | With Your Family
+                        div Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.
+                        div.btn: a(href="#one") Get Started
+                    .boxTwo 
+                        img(src="imgs/carousel-1.jpg", alt="house" id="carousel")
+        block adsenseOne 
+            section.adsense
+                | Lorem ipsum dolor sit amet, consectetur adipisicing 
+                br 
+                | elit. Hic, ullam optio quasi 
+        block propertyTypes
+            section.propertyTypes#one
+                .container
+                    .title Property Types
+                    .paragraph Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd 
+                        br 
+                        | vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.
+                    .boxs 
+                        .box 
+                            img(src="imgs/icon-apartment.png", alt="img of apartment")
+                            div Apartment
+                            div 123 Properties
+                        .box 
+                            img(src="imgs/icon-villa.png", alt="img of villa")
+                            div villa
+                            div 123 Properties
+                        .box 
+                            img(src="imgs/icon-house.png", alt="img of house")
+                            div House
+                            div 123 Properties
+                        .box 
+                            img(src="imgs/icon-housing.png", alt="img of office")
+                            div Office
+                            div 123 Properties
+                        .box 
+                            img(src="imgs/icon-building.png", alt="img of building")
+                            div Building
+                            div 123 Properties
+                            
+                        .box 
+                            img(src="imgs/icon-neighborhood.png", alt="img of townhouse")
+                            div Townhouse
+                            div 123 Properties
+                            
+                        .box 
+                            img(src="imgs/icon-condominium.png", alt="img of shop")
+                            div Shop
+                            div 123 Properties
+                        .box 
+                            img(src="imgs/icon-luxury.png", alt="img of garage")
+                            div Garage
+                            div 123 Properties
+        block adsenseTwo 
+            section.adsense
+                | Lorem ipsum dolor sit amet, consectetur adipisicing 
+                br 
+                | elit. Hic, ullam optio quasi 
+        block about 
+            section.about
+                .container
+                    .boxOne
+                        img(src="imgs/about.jpg", alt="house")
+                    .boxTwo
+                        .title #1 Place To Find The Perfect 
+                            br 
+                            | Property
+                        .paragraph Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et 
+                            br 
+                            | eos. Clita erat ipsum et lorem et sit, sed stet lorem sit 
+                            br 
+                            | clita duo justo magna dolore erat amet
+                        div 
+                            div <i class="fa-solid fa-check"></i> Tempor erat elitr rebum at clita
+                            div <i class="fa-solid fa-check"></i> Aliqu diam amet diam et eos
+                            div <i class="fa-solid fa-check"></i> Clita duo justo magna dolore erat amet
+                        div.btn: a(href="#two") Read More
+        block adsenseThree
+            section.adsense
+                | Lorem ipsum dolor sit amet, consectetur adipisicing 
+                br 
+                | elit. Hic, ullam optio quasi
+        block propertyList
+            section.propertyList#two
+                .container
+                    .parent
+                        .childOne
+                            .title Property Listing
+                            .paragraph Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd 
+                                br 
+                                | vero ipsum sit eirmod sit diam justo sed rebum.
+                        .childTwo
+                            a.active#btnOne(href="##") Featured
+                            a.notActive#btnTwo(href="##") For Sell
+                            a.notActive#btnThree(href="##") For Rent
+                    .boxs
+                        .box
+                            .img
+                                img(src="imgs/property-1.jpg", alt="property")
+                                span For Sell
+                                span Appartment
+                            .text 
+                                div $12,345
+                                div Golden Urban House For Sell
+                                div <i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA 
+                                div 
+                                    span <i class="fa-solid fa-ruler-combined"></i> 1000 Sqft
+                                    span <i class="fa-solid fa-bed"></i> 3 Bed
+                                    span <i class="fa-solid fa-bath"></i> 2 bath
+                        .box
+                            .img
+                                img(src="imgs/property-2.jpg", alt="property")
+                                span For Rent
+                                span Villa
+                            .text 
+                                div $12,345
+                                div Golden Urban House For Sell
+                                div <i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA 
+                                div 
+                                    span <i class="fa-solid fa-ruler-combined"></i> 1000 Sqft
+                                    span <i class="fa-solid fa-bed"></i> 3 Bed
+                                    span <i class="fa-solid fa-bath"></i> 2 bath
+                        .box
+                            .img
+                                img(src="imgs/property-3.jpg", alt="property")
+                                span For Sell
+                                span Office
+                            .text 
+                                div $12,345
+                                div Golden Urban House For Sell
+                                div <i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA 
+                                div 
+                                    span <i class="fa-solid fa-ruler-combined"></i> 1000 Sqft
+                                    span <i class="fa-solid fa-bed"></i> 3 Bed
+                                    span <i class="fa-solid fa-bath"></i> 2 bath
+                        .box
+                            .img
+                                img(src="imgs/property-4.jpg", alt="property")
+                                span For Rent
+                                span Building
+                            .text 
+                                div $12,345
+                                div Golden Urban House For Sell
+                                div <i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA 
+                                div 
+                                    span <i class="fa-solid fa-ruler-combined"></i> 1000 Sqft
+                                    span <i class="fa-solid fa-bed"></i> 3 Bed
+                                    span <i class="fa-solid fa-bath"></i> 2 bath
+                        .box
+                            .img
+                                img(src="imgs/property-5.jpg", alt="property")
+                                span For Sell
+                                span Home
+                            .text 
+                                div $12,345
+                                div Golden Urban House For Sell
+                                div <i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA 
+                                div 
+                                    span <i class="fa-solid fa-ruler-combined"></i> 1000 Sqft
+                                    span <i class="fa-solid fa-bed"></i> 3 Bed
+                                    span <i class="fa-solid fa-bath"></i> 2 bath
+                        .box
+                            .img
+                                img(src="imgs/property-6.jpg", alt="property")
+                                span For Rent
+                                span Shop
+                            .text 
+                                div $12,345
+                                div Golden Urban House For Sell
+                                div <i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA 
+                                div 
+                                    span <i class="fa-solid fa-ruler-combined"></i> 1000 Sqft
+                                    span <i class="fa-solid fa-bed"></i> 3 Bed
+                                    span <i class="fa-solid fa-bath"></i> 2 bath
+        block adsenseThree
+            section.adsense
+                | Lorem ipsum dolor sit amet, consectetur adipisicing 
+                br 
+                | elit. Hic, ullam optio quasi
+        block contactAgent
+            section.contactAgent
+                .container
+                    .boxOne
+                        img(src="imgs/call-to-action.jpg", alt="man")
+                    .boxTwo
+                        .title Contact With Our Certified 
+                            br 
+                            | Agent
+                        .paragraph Eirmod sed ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum 
+                            br 
+                            | sit sit diam justo sed vero dolor duo.
+                        div.btn: a(href="contact.html") <i class="fa-solid fa-phone"></i> Contact Us
+        block adsenseThree
+            section.adsense
+                | Lorem ipsum dolor sit amet, consectetur adipisicing 
+                br 
+                | elit. Hic, ullam optio quasi
+        block propertyAgents
+            section.propertyAgents
+                .container 
+                    .title Property Agents
+                    .paragraph Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd 
+                        br
+                        | vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.
+                    .boxs 
+                        .box 
+                            .img
+                                img(src="imgs/team-1.jpg", alt="human")  
+                            .text 
+                                div Full Name 
+                                div Designation
+                        .box 
+                            .img: img(src="imgs/team-2.jpg", alt="human")
+                            .text 
+                                div Full Name 
+                                div Designation
+                        .box 
+                            .img: img(src="imgs/team-3.jpg", alt="human")
+                            .text 
+                                div Full Name 
+                                div Designation
+                        .box 
+                            .img: img(src="imgs/team-4.jpg", alt="human")
+                            .text 
+                                div Full Name 
+                                div Designation
+        block adsenseThree
+            section.adsense
+                | Lorem ipsum dolor sit amet, consectetur adipisicing 
+                br 
+                | elit. Hic, ullam optio quasi
+        block testimonial
+            section.testimonial
+                .container 
+                    .title Our Clients Say!
+                    .paragraph Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd 
+                        br
+                        | vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.
+                    .box 
+                        div Tempor stet labore dolor clita stet diam amet ipsum dolor duo 
+                            br 
+                            | ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est 
+                            br 
+                            | kasd kasd erat eos
+                        div
+                            .img: img(src="imgs/testimonial-3.jpg", alt="human")
+                            .text 
+                                div Client Name 
+                                div Profession
+        block footer
+            footer Copyright 2024 © by 
+                span beshoy samy.
+        script(src="script/dist/main.js")
