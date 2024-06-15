@@ -1,0 +1,44 @@
+// import variables file
+@use "variables" as *; 
+.propertyAgents {
+    .container {
+        .title {
+            margin-bottom: $margin 0;
+        }
+        .paragraph {
+            margin: $margin 0;
+        }
+        .boxs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            .box {
+                .img {
+                    position: relative;
+                    img {
+                        width: 18.75em;
+                    }
+                }
+                .text {
+                    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 10px 0;
+                    div:nth-child(1) {
+                        color: $third_color;
+                        font-size: $font_four;
+                        font-weight: bold;
+                    }
+                    div:nth-child(2) {
+                        color: $sec_color;
+                        font-size: $font_seven;
+                    }
+                }
+            }
+        }
+    }
+}

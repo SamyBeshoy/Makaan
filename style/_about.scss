@@ -1,0 +1,62 @@
+// import variables file
+@use "variables" as *;
+.about {
+    .container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .boxOne {
+            width: 28.125em;
+            img {
+                width: 100%;
+            }
+        }
+        .boxTwo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .title,
+            .paragraph {
+                text-align: left;
+                margin: $margin 0;
+            }
+            div:nth-child(3) {
+                div {
+                    margin: 10px 0;
+                    color: $sec_color;
+                    font-size: $font_four;
+                    i {
+                        font-size: $font_six;
+                        color: $main_color;
+                        margin-right: 15px;
+                    }
+                }
+            }
+            .btn {
+                margin: $margin 0 calc($margin + 15px);
+            }
+        }
+    }
+}
+@media(max-width: 1170px) {
+    .about .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .boxTwo {
+            align-items: center;
+            .title,
+            .paragraph {
+                text-align: center;
+            }
+            div:nth-child(3) {
+                div {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

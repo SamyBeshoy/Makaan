@@ -1,0 +1,40 @@
+// import variables file
+@use "variables" as *;
+.contactAgent {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .boxOne {
+            img {
+                width: 25em;
+            }
+        }
+        .boxTwo {
+            .title ,
+            .paragraph {
+                text-align: left;
+            }
+            .paragraph {
+                margin: $margin 0 calc($margin + 15px) 0;
+            }
+        }
+    }
+}
+@media(max-width: 1050px) {
+    .contactAgent {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 40px;
+            .boxTwo {
+                .title ,
+                .paragraph {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

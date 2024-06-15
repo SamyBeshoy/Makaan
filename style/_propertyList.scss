@@ -1,0 +1,154 @@
+// import variables file
+@use "variables" as *;
+.propertyList {
+    .container {
+        .parent {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            .childOne {
+                .title ,
+                .paragraph {
+                    text-align: unset;
+                }
+                .title {
+                    margin-bottom: 10px;
+                }
+                .paragraph {
+                    line-height: 1.3;
+                }
+            }
+            .childTwo {
+                a {
+                    text-decoration: none;
+                    margin: 0 5px;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-size: $font_four;
+                    transition: $transition;
+                }
+            }
+        }
+        .boxs {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            .box {
+                .img {
+                    position: relative;
+                    width: 25em;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        transition: $transition;
+                    }
+                    span:nth-child(2) {
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        color: white; 
+                        background-color: $main_color;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        font-size: $font_four;
+                    }
+                    span:nth-child(3) {
+                        position: absolute;
+                        bottom: 0;
+                        left: 20px;
+                        background-color: white;
+                        color: $main_color;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        font-size: $font_four;
+                    }
+                    &:hover img {
+                        transform: scale(1.1);
+                    }
+                }
+                .text {
+                    width: 25em;
+                    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+                    padding: 20px 0 0 0;
+                    div:nth-child(1) {
+                        margin-bottom: 10px;
+                        margin-left: 20px;
+                        color: $main_color;
+                        font-size: $font_six;
+                        font-weight: bold;
+                    }
+                    div:nth-child(2) {
+                        margin: 10px 0;
+                        margin-left: 20px;
+                        font-size: $font_six;
+                        font-weight: bold;
+                    }
+                    div:nth-child(3) {
+                        margin: 10px 0;
+                        margin-left: 20px;
+                        font-size: $font_four;
+                        color: $sec_color;
+                        i {
+                            color: $main_color;
+                        }
+                    }
+                    div:nth-child(4) {
+                        display: flex;
+                        justify-content: space-between;
+                        border-top: 1px solid $main_color;
+                        font-size: $font_four;
+                        color: $sec_color;
+                        span:nth-child(1) {
+                            width: calc(100% / 3);
+                            text-align: center;
+                            padding: 10px 0;
+                        }
+                        span:nth-child(2) {
+                            border-left: 1px solid $main_color;
+                            border-right: 1px solid $main_color;
+                            width: calc(100% / 3);
+                            text-align: center;
+                            padding: 10px 0;
+                        }
+                        span:nth-child(3) {
+                            width: calc(100% / 3);
+                            text-align: center;
+                            padding: 10px 0;
+                        }
+                        i {
+                            color: $main_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.active {
+    color: white; 
+    background-color: $main_color;
+}
+.notActive {
+    color: black; 
+    background-color: white;
+    border: 1px solid $main_color;
+    &:hover {
+        color: white; 
+        background-color: $main_color;
+    }
+}
+@media(max-width: 1000px) {
+    .propertyList{
+        .container {
+            .parent {
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+    }
+}

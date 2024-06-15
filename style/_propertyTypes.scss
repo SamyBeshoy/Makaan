@@ -1,0 +1,46 @@
+// import variables file
+@use "variables" as *; 
+.propertyTypes {
+    .container {
+        .paragraph {
+            margin: $margin 0;
+        }
+        .boxs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .box {
+                width: fit-content;
+                margin: 20px;
+                border-radius: 10px;
+                border: 15px solid $fourth_color;
+                text-align: center;
+                padding: 25px 80px;
+                transition: $transition;
+                img {
+                    border-radius: 50%;
+                    border: 1px dashed $main_color;
+                    padding: 10px;
+                    background-color: white;
+                }
+                div:nth-child(2) {
+                    margin: 10px 0;
+                    font-weight: bold;
+                    font-size: $font_four;
+                }
+                div:nth-child(3) {
+                    color: $main_color;
+                    font-size: $font_four;
+                }
+                &:hover  {
+                    background-color: $main_color;
+                    color: white;
+                }
+                &:hover div:nth-child(3) {
+                    color: white;
+                }
+            }
+        }
+    }
+}

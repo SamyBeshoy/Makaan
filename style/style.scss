@@ -1,0 +1,37 @@
+// import global file
+@use "global" as *; 
+
+// import variables file
+@use "variables" as *; 
+
+// import header file
+@use "header" as *; 
+
+// import landing file
+@use "landing" as *; 
+
+// import adsense file
+@use "adsense" as *; 
+
+// import propertyTypes file
+@use "propertyTypes" as *; 
+
+// import about file
+@use "about" as *; 
+
+// import propertyList file
+@use "propertyList" as *;
+
+// import contactAgent file
+@use "contactAgent" as *;
+
+// import propertyAgents file
+@use "propertyAgents" as *;
+
+// import testimonial file
+@use "testimonial" as *;
+
+// import footer file
+@use "footer" as *;
+
+// make media qgury after change html font-size after end of html code

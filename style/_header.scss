@@ -1,0 +1,153 @@
+// import variables file
+@use "variables" as *;
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    .container {
+        position: absolute;
+        margin-top: 30px;
+        padding: 15px 30px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        height: fit-content;
+        box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+        transition: $transition;
+        .boxOne {
+            display: flex;
+            align-items: center;
+            img {
+                border-radius: 50%;
+                border: 1px dashed $main_color;
+                padding: 10px;
+            }
+            span a {
+                font-size: $font_two;
+                color: $main_color;
+                text-decoration: none;
+                font-weight: bold;
+                margin-left: 20px;
+            }
+        }
+        .boxTwo {
+            display: flex;
+            align-items: center;
+            span a {
+                text-decoration: none; 
+                color: black;
+                margin-left: 50px;
+                font-size: $font_six;
+                transition: $transition;
+                &:hover {
+                    color: $main_color;
+                }
+            }
+            span:nth-child(1) a {
+                color: $main_color;
+            }
+        }
+        .sidenav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            z-index: 156;
+            background-color: #ffffff;
+            overflow: hidden;
+            transition: $transition;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .parent {
+                padding: 20px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .ch1 {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        border-radius: 50%;
+                        border: 1px dashed $main_color;
+                        padding: 10px;
+                    }
+                    span a {
+                        font-size: $font_two;
+                        color: $main_color;
+                        text-decoration: none;
+                        font-weight: bold;
+                        margin-left: 20px;
+                    }
+                    }
+                .ch2 {
+                    .closebtn {
+                        font-size: $font_two;
+                        color: black;
+                    }
+                }
+            }
+            div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                a {
+                    text-decoration: none;
+                    font-size: $font_six;
+                    color: #818181;
+                    display: block;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $main_color;
+                    }
+                }
+                a:nth-child(1) {
+                    color: $main_color;
+                }
+            }
+        }        
+        .boxThree {
+            .tog {
+                font-size: $font_three;
+                color: #000000;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media(max-width: 1000px) {
+    header {
+        .container {
+            position: relative;
+            margin-bottom: 80px;
+        }
+    }
+}
+@media (max-width:860px) {
+    header {
+        .container {
+            .boxTwo {
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width:861px) {
+    header {
+        .container {
+            .boxThree {
+                display: none;
+            }
+        }
+    }
+}

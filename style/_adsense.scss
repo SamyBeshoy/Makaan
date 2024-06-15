@@ -1,0 +1,13 @@
+// import variables file
+@use "variables" as *; 
+.adsense {
+    background-color: $main_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.5;
+    color: white;
+    font-size: $font_six;
+}

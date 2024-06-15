@@ -1,0 +1,63 @@
+// import variables file
+@use "variables" as *; 
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+#carousel {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+section {
+    padding: 2em 0;
+}
+.btn{
+    a {
+        font-size: $font_six;
+        text-decoration: none;
+        color: white;
+        background-color: $main_color;
+        padding: 15px 30px;
+        border-radius: 5px;
+    }
+}
+.title {
+    text-align: center;
+    color: $third_color;
+    font-weight: bold;
+    font-size: $font_five;
+}
+.paragraph {
+    color: $sec_color;
+    text-align: center;
+    font-size: $font_four;
+}
+@media(max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media(max-width: 450px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media(max-width: 370px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media(max-width: 300px) {
+    html {
+        font-size: 8px;
+    }
+}

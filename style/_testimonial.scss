@@ -1,0 +1,48 @@
+// import variables file
+@use "variables" as *; 
+.testimonial {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .paragraph {
+            margin: $margin 0;
+        }
+        .box {
+            border: 15px solid $fourth_color;
+            padding: 20px;
+            div:nth-child(1) {
+                line-height: 1.3;
+                margin-bottom: 10px;
+                color: $sec_color;
+                font-size: $font_four;
+            }
+            div:nth-child(2) {
+                display: flex;
+                align-items: center;
+                .img {
+                    margin: 0;
+                    img {
+                        border-radius: 5px;
+                        width: 2.5em;
+                        margin-right: 10px;
+                    }
+                }
+                .text {
+                    display: block;
+                    div:nth-child(1) {
+                        font-size: $font_four;
+                        font-weight: bold;
+                        color: $third_color;
+                        margin: 0;
+                    }
+                    div:nth-child(2) {
+                        font-size: $font_seven;
+                        color: $sec_color;
+                    }
+                }
+            }
+        }
+    }
+}

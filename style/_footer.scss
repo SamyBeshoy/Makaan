@@ -1,0 +1,12 @@
+// import variables file
+@use "variables" as *; 
+footer {
+    background-color: $third_color;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: $font_four;
+    span {
+        color: $main_color;
+    }
+}
